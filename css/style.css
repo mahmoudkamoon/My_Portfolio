@@ -1003,4 +1003,31 @@ body[lang="ar"] .whatsapp-btn {
     .menu-toggle {
         display: flex;
     }
+
+    /* Mobile specific adjustments */
+    .name { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .section-title { font-size: 1.8rem; }
+    
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin-top: 50px;
+    }
+}
+
+/* Prevent horizontal scroll issues */
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Ensure images are always contained properly */
+img {
+    max-width: 100%;
+    height: auto;
 }
