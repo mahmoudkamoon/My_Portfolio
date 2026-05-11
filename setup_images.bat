@@ -12,6 +12,7 @@ copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c9
 copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c97b2\novera_app_real_mockup_1778524802901.png" "assets\images\novera_app.png"
 copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c97b2\newscloud_app_real_mockup_1778525236474.png" "assets\images\newscloud_app.png"
 copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c97b2\chato_app_real_mockup_1778525378192.png" "assets\images\chato_app.png"
+copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c97b2\dawenit_app_real_mockup_1778525841616.png" "assets\images\dawenit_app.png"
 
 echo === Done! Images copied successfully ===
 echo.
