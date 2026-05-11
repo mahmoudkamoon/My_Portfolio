@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mamdouh Medhat — Flutter Software Engineer. Building modern, elegant, high-performance cross-platform mobile applications.">
+    <title>Mamdouh Medhat | Flutter Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body lang="ar" class="theme-dark calm-theme">
+    
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="en">Dev</span><span class="ar">مطور</span><span class="highlight">.</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
+                <li><a href="#about"><span class="en">About</span><span class="ar">عني</span></a></li>
+                <li><a href="#services"><span class="en">Services</span><span class="ar">خدماتي</span></a></li>
+                <li><a href="#portfolio"><span class="en">Portfolio</span><span class="ar">أعمالي</span></a></li>
+                <li><a href="#contact"><span class="en">Contact</span><span class="ar">تواصل معي</span></a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-icon" aria-label="Toggle Language">
+                    <i class="fa-solid fa-globe"></i> <span class="lang-text">EN</span>
+                </button>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <p class="greeting">
+                    <span class="en">Hello, I am</span>
+                    <span class="ar">أهلاً بك، أنا</span>
+                </p>
+                <h1 class="name">
+                    <span class="en">Mamdouh A Flutter Developer</span>
+                    <span class="ar">ممدوح مطور تطبيقات فلاتر </span>
+                </h1>
+                <h2 class="title text-gradient">
+                    <span class="en">Building Modern & Elegant Apps</span>
+                    <span class="ar">أبني تطبيقات عصرية وأنيقة</span>
+                </h2>
+                <p class="description">
+                    <span class="en">I craft seamless, high-performance cross-platform mobile applications with a focus on calm, attractive, and user-friendly designs.</span>
+                    <span class="ar">أصمم وأبرمج تطبيقات هواتف ذكية متكاملة وسريعة الأداء، مع التركيز على التصاميم الهادئة والجذابة التي تمنح المستخدم تجربة مريحة وسلسة.</span>
+                </p>
+                
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span class="en">View My Work</span>
+                        <span class="ar">شاهد أعمالي</span>
+                        <i class="fa-solid fa-arrow-right icon-dir"></i>
+                    </a>
+                    <a href="resume.html" class="btn btn-outline" target="_blank">
+                        <span class="en">Download CV</span>
+                        <span class="ar">تحميل السيرة الذاتية</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span class="en">Let's Talk</span>
+                        <span class="ar">لنتحدث</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container fade-in-up delay-1">
+                <div class="glass-card mockup-card">
+                    <div class="mockup-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="mockup-body">
+                        <!-- Placeholder for a beautiful Flutter app UI snippet -->
+                        <div class="code-snippet">
+                            <pre><code><span class="keyword">class</span> <span class="class">BeautifulApp</span> <span class="keyword">extends</span> <span class="class">StatelessWidget</span> {
+  <span class="keyword">@override</span>
+  <span class="class">Widget</span> build(<span class="class">BuildContext</span> context) {
+    <span class="keyword">return</span> <span class="class">MaterialApp</span>(
+      theme: <span class="class">ThemeData</span>(
+        brightness: <span class="class">Brightness</span>.dark,
+        primaryColor: <span class="class">Colors</span>.tealAccent,
+      ),
+      home: <span class="class">HomeScreen</span>(),
+    );
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating Icons -->
+                <div class="floating-icon icon-flutter"><i class="fa-brands fa-flutter"></i></div>
+                <div class="floating-icon icon-dart"><i class="fa-solid fa-code"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span><i class="fa-brands fa-flutter"></i> Flutter</span>
+                <span><i class="fa-solid fa-code"></i> Dart</span>
+                <span><i class="fa-solid fa-cubes"></i> BLoC</span>
+                <span><i class="fa-solid fa-layer-group"></i> Clean Architecture</span>
+                <span><i class="fa-brands fa-firebase"></i> Firebase</span>
+                <span><i class="fa-solid fa-server"></i> REST APIs</span>
+                <span><i class="fa-solid fa-database"></i> Hive</span>
+                <span><i class="fa-solid fa-syringe"></i> GetIt / DI</span>
+                <span><i class="fa-solid fa-vial"></i> Unit Testing</span>
+                <span><i class="fa-solid fa-mobile-screen-button"></i> UI/UX Design</span>
+                <span><i class="fa-solid fa-map-location-dot"></i> Google Maps</span>
+                <span><i class="fa-solid fa-lock"></i> Secure Storage</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span><i class="fa-brands fa-flutter"></i> Flutter</span>
+                <span><i class="fa-solid fa-code"></i> Dart</span>
+                <span><i class="fa-solid fa-cubes"></i> BLoC</span>
+                <span><i class="fa-solid fa-layer-group"></i> Clean Architecture</span>
+                <span><i class="fa-brands fa-firebase"></i> Firebase</span>
+                <span><i class="fa-solid fa-server"></i> REST APIs</span>
+                <span><i class="fa-solid fa-database"></i> Hive</span>
+                <span><i class="fa-solid fa-syringe"></i> GetIt / DI</span>
+                <span><i class="fa-solid fa-vial"></i> Unit Testing</span>
+                <span><i class="fa-solid fa-mobile-screen-button"></i> UI/UX Design</span>
+                <span><i class="fa-solid fa-map-location-dot"></i> Google Maps</span>
+                <span><i class="fa-solid fa-lock"></i> Secure Storage</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-title text-center fade-in-up">
+                <h2>
+                    <span class="en">What I Do</span>
+                    <span class="ar">ماذا أقدم</span>
+                </h2>
+                <p>
+                    <span class="en">Crafting digital experiences with a touch of elegance.</span>
+                    <span class="ar">صناعة تجارب رقمية بلمسة من الأناقة والهدوء.</span>
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card glass-card fade-in-up delay-1">
+                    <div class="service-icon"><i class="fa-brands fa-flutter"></i></div>
+                    <h3>
+                        <span class="en">Cross-Platform Development</span>
+                        <span class="ar">تطبيقات متعددة المنصات</span>
+                    </h3>
+                    <p>
+                        <span class="en">Building robust Android and iOS applications from a single codebase using Flutter, ensuring consistency and speed.</span>
+                        <span class="ar">بناء تطبيقات قوية للأندرويد والآيفون من كود برمجي واحد باستخدام فلاتر، مما يضمن التناسق وسرعة الإنجاز.</span>
+                    </p>
+                </div>
+                
+                <div class="service-card glass-card fade-in-up delay-2">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>
+                        <span class="en">Modern UI/UX Implementation</span>
+                        <span class="ar">تطبيق تصاميم عصرية</span>
+                    </h3>
+                    <p>
+                        <span class="en">Translating beautiful designs into pixel-perfect, smooth, and interactive user interfaces.</span>
+                        <span class="ar">تحويل التصاميم الجميلة إلى واجهات مستخدم دقيقة، سلسة، وتفاعلية تريح العين.</span>
+                    </p>
+                </div>
+
+                <div class="service-card glass-card fade-in-up delay-3">
+                    <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>
+                        <span class="en">Clean Architecture</span>
+                        <span class="ar">بنية برمجية نظيفة</span>
+                    </h3>
+                    <p>
+                        <span class="en">Writing maintainable, scalable, and testable code following the best industry practices and design patterns.</span>
+                        <span class="ar">كتابة كود برمجي قابل للصيانة والتطوير والاختبار باتباع أفضل الممارسات البرمجية.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>
+                    <span class="en">Featured Work</span>
+                    <span class="ar">أبرز أعمالي</span>
+                </h2>
+                <p>
+                    <span class="en">A glimpse into the modern apps I've built.</span>
+                    <span class="ar">نظرة على التطبيقات الحديثة التي قمت بتطويرها.</span>
+                </p>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Projects will be dynamically injected here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Project Image">
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-desc"></p>
+                    <div class="tags" id="modal-tags"></div>
+                    <div class="modal-links">
+                        <a href="#" id="modal-github" class="btn btn-outline" target="_blank">
+                            <i class="fa-brands fa-github"></i> <span class="en">GitHub</span><span class="ar">جيت هاب</span>
+                        </a>
+                        <a href="#" id="modal-playstore" class="btn btn-primary" target="_blank">
+                            <i class="fa-brands fa-google-play"></i> <span class="en">Play Store</span><span class="ar">جوجل بلاي</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper glass-card fade-in-up">
+                <div class="contact-info">
+                    <h2>
+                        <span class="en">Let's build something amazing together</span>
+                        <span class="ar">لنقم ببناء شيء رائع معاً</span>
+                    </h2>
+                    <p>
+                        <span class="en">Have a project in mind or looking for a developer to join your team? I'd love to hear from you.</span>
+                        <span class="ar">هل لديك فكرة مشروع أو تبحث عن مطور للانضمام لفريقك؟ يسعدني تواصلك معي.</span>
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/mahmoudkamoon" class="social-icon" id="link-github" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mamdouh-medhat-354503218" class="social-icon" id="link-linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:mahmoudkamoon123@gmail.com" class="social-icon" id="link-email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <!-- Web3Forms Integration -->
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="27dd21a5-7d85-4c4e-a53c-fe4342cecf3b">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder=" " required>
+                            <label>
+                                <span class="en">Your Name</span>
+                                <span class="ar">الاسم</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder=" " required>
+                            <label>
+                                <span class="en">Your Email</span>
+                                <span class="ar">البريد الإلكتروني</span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <textarea rows="4" name="message" placeholder=" " required></textarea>
+                            <label>
+                                <span class="en">Your Message</span>
+                                <span class="ar">رسالتك</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <span class="en">Send Message</span>
+                            <span class="ar">إرسال الرسالة</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <span class="en">&copy; 2026 Developed with <i class="fa-solid fa-heart" style="color: #e25555;"></i></span>
+                <span class="ar">&copy; 2026 تم التطوير بواسطتي <i class="fa-solid fa-heart" style="color: #e25555;"></i></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/201024010214" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/projects.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

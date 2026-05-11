@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamdouh Medhat — Flutter Software Engineer — Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --bg: #ffffff;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Print Button */
+        .print-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+        .print-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+            transition: all 0.2s;
+        }
+        .print-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4); }
+        .back-btn {
+            background: var(--dark);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .back-btn:hover { transform: translateY(-2px); }
+
+        /* Resume Container */
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: var(--bg);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 40px 45px;
+        }
+
+        /* Header */
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        .header-left h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .header-left h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .header-left .summary {
+            font-size: 0.88rem;
+            color: var(--gray);
+            max-width: 420px;
+            line-height: 1.55;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--gray);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .header-right a { color: var(--primary); text-decoration: none; }
+        .header-right i { width: 18px; color: var(--primary); margin-right: 6px; }
+
+        /* Two Column Layout */
+        .resume-body {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 30px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1.5px solid var(--light-gray);
+        }
+
+        /* Project Items */
+        .project-item {
+            margin-bottom: 16px;
+        }
+
+        .project-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 3px;
+        }
+
+        .project-item .tech-used {
+            font-size: 0.78rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .project-item p {
+            font-size: 0.82rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+
+        .project-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-item ul li {
+            font-size: 0.82rem;
+            color: var(--gray);
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 2px;
+        }
+
+        .project-item ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Sidebar */
+        .sidebar section { margin-bottom: 22px; }
+
+        /* Skills */
+        .skill-category { margin-bottom: 12px; }
+        
+        .skill-category h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-tag {
+            font-size: 0.72rem;
+            padding: 3px 10px;
+            background: #f0f9ff;
+            color: var(--primary);
+            border: 1px solid #bae6fd;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Education */
+        .edu-item h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        .edu-item p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Languages */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+        .lang-item span:first-child { font-weight: 500; }
+        .lang-item span:last-child { color: var(--gray); }
+
+        /* Print Styles */
+        @media print {
+            body { background: white; }
+            .resume { box-shadow: none; margin: 0; padding: 30px 40px; width: 100%; }
+            .print-controls { display: none; }
+        }
+
+        @media (max-width: 800px) {
+            .resume { width: 100%; padding: 25px; }
+            .resume-body { grid-template-columns: 1fr; }
+            .resume-header { flex-direction: column; gap: 15px; }
+            .header-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-controls">
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <button class="print-btn" onclick="window.print()">
+            <i class="fa-solid fa-download"></i> Download PDF
+        </button>
+    </div>
+
+    <div class="resume">
+        <!-- Header -->
+        <div class="resume-header">
+            <div class="header-left">
+                <h1>Mamdouh Medhat</h1>
+                <h2>Flutter Software Engineer</h2>
+                <p class="summary">
+                    Passionate and detail-oriented Flutter developer with hands-on experience building 11+ cross-platform mobile applications. 
+                    Proficient in Clean Architecture, BLoC state management, and RESTful API integration. 
+                    Experienced in Agile/Scrum workflows. Focused on delivering modern, high-performance UIs with elegant and user-friendly designs.
+                </p>
+            </div>
+            <div class="header-right">
+                <div><i class="fa-solid fa-envelope"></i> mahmoudkamoon123@gmail.com</div>
+                <div><i class="fa-solid fa-phone"></i> +20 102 401 0214</div>
+                <div><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/mamdouh-medhat-354503218" target="_blank">linkedin.com/in/mamdouh-medhat</a></div>
+                <div><i class="fa-brands fa-github"></i> <a href="https://github.com/mahmoudkamoon" target="_blank">github.com/mahmoudkamoon</a></div>
+                <div><i class="fa-solid fa-location-dot"></i> Egypt</div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="resume-body">
+            <!-- Main Column -->
+            <div class="main-column">
+                <div class="section-title">Projects & Experience</div>
+
+                <!-- Project 1 -->
+                <div class="project-item">
+                    <h3>🌸 Flower Store — E-Commerce App</h3>
+                    <div class="tech-used">Flutter · Dart · BLoC · Clean Architecture · Retrofit · Google Maps · Dio</div>
+                    <ul>
+                        <li>Built a full-featured e-commerce platform for purchasing flowers with product listing, search, filtering, and categories.</li>
+                        <li>Implemented Clean Architecture with separate data, domain, and presentation layers for scalability.</li>
+                        <li>Integrated Google Maps for real-time location tracking and delivery pinning.</li>
+                        <li>Used Retrofit for type-safe API communication and Flutter Secure Storage for token management.</li>
+                        <li>Wrote unit tests with BLoC Test and Mockito for business logic validation.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-item">
+                    <h3>📝 Elevate Exam App — E-Learning Platform</h3>
+                    <div class="tech-used">Flutter · BLoC · Hive · GetIt · Injectable · Retrofit</div>
+                    <ul>
+                        <li>Developed an exam-taking app with multiple-choice questions, progress tracking, and score reporting.</li>
+                        <li>Implemented offline data persistence using Hive for caching user progress.</li>
+                        <li>Used GetIt and Injectable for dependency injection, ensuring clean testable code.</li>
+                        <li>Integrated Skeleton loading animations for improved UX during API calls.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-item">
+                    <h3>🍔 Hungry — Food Delivery App</h3>
+                    <div class="tech-used">Flutter · Firebase · Provider · REST API</div>
+                    <ul>
+                        <li>Created a modern food delivery app with restaurant browsing, cart management, and order placement.</li>
+                        <li>Integrated Firebase for real-time database operations, authentication, and push notifications.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-item">
+                    <h3>💬 Chato — Real-Time Messaging App</h3>
+                    <div class="tech-used">Flutter · Firebase · WebSockets · Cloud Messaging</div>
+                    <ul>
+                        <li>Built a real-time chat application supporting group conversations, media sharing, and push notifications.</li>
+                        <li>Implemented WebSocket connections for instant message delivery and read receipts.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-item">
+                    <h3>📰 NewsCloud — Personalized News Reader</h3>
+                    <div class="tech-used">Flutter · REST API · Sqflite · Dio</div>
+                    <ul>
+                        <li>Developed a news aggregation app with category filters, offline reading, and dark mode support.</li>
+                        <li>Used Sqflite for local caching of articles enabling full offline functionality.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-item">
+                    <h3>🌤️ Weather App — Forecast & Conditions</h3>
+                    <div class="tech-used">Flutter · OpenWeatherMap API · Location Services · Dio</div>
+                    <ul>
+                        <li>Integrated OpenWeatherMap API for accurate real-time forecasts and 7-day predictions.</li>
+                        <li>Implemented geolocation services for automatic weather detection based on user location.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-item">
+                    <h3>📖 Qiraa — Quran Reading App</h3>
+                    <div class="tech-used">Flutter · Audio Player · Local Storage</div>
+                    <ul>
+                        <li>Designed a serene Quran reading app with bookmarking, audio recitation, and smooth page navigation.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-item">
+                    <h3>✨ Novera — Service Application</h3>
+                    <div class="tech-used">Flutter · Custom Animations · UI/UX Design</div>
+                    <ul>
+                        <li>Built a visually rich application featuring custom animations, transitions, and modern UI patterns.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-item">
+                    <h3>🎵 Tunes — Music Player</h3>
+                    <div class="tech-used">Flutter · Audio Playback · Custom UI</div>
+                    <ul>
+                        <li>Created an elegant music player for local audio playback with waveform visualization.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-item">
+                    <h3>📒 DawenIt (MyNote) — Note-Taking App</h3>
+                    <div class="tech-used">Flutter · Hive · Rich Text Editor</div>
+                    <ul>
+                        <li>Developed a secure note-taking app with rich text editing, categories, and local Hive database storage.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-item">
+                    <h3>🌐 Toku — Language Learning App</h3>
+                    <div class="tech-used">Flutter · Audio · Education</div>
+                    <ul>
+                        <li>Built an interactive vocabulary learning app with categorized lessons and audio pronunciations.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="project-item">
+                    <h3>🎁 Karam App — Utility Application</h3>
+                    <div class="tech-used">Flutter · WindowManager · Platform Channels</div>
+                    <ul>
+                        <li>Developed a utility app leveraging platform-specific APIs and Flutter window management plugins.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Technical Skills -->
+                <section>
+                    <div class="section-title">Technical Skills</div>
+
+                    <div class="skill-category">
+                        <h4>Languages & Frameworks</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">Flutter</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>State Management</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">BLoC / Cubit</span>
+                            <span class="skill-tag">Provider</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Architecture & Patterns</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">MVI Pattern</span>
+                            <span class="skill-tag">SOLID Principles</span>
+                            <span class="skill-tag">Repository Pattern</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Networking & APIs</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Dio</span>
+                            <span class="skill-tag">Retrofit</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">WebSockets</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Backend & Storage</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Hive</span>
+                            <span class="skill-tag">Sqflite</span>
+                            <span class="skill-tag">Secure Storage</span>
+                            <span class="skill-tag">SharedPreferences</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Dependency Injection</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">GetIt</span>
+                            <span class="skill-tag">Injectable</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Testing</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Unit Testing</span>
+                            <span class="skill-tag">BLoC Test</span>
+                            <span class="skill-tag">Mockito</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Methodologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Scrum</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Tools & Services</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Google Maps</span>
+                            <span class="skill-tag">Location Services</span>
+                            <span class="skill-tag">FCM</span>
+                            <span class="skill-tag">Lottie</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>UI/UX</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">Custom Animations</span>
+                            <span class="skill-tag">ScreenUtil</span>
+                            <span class="skill-tag">SVG/Shimmer</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section>
+                    <div class="section-title">Education</div>
+                    <div class="edu-item">
+                        <h3>Bachelor's Degree</h3>
+                        <p>Computer Science / IT</p>
+                        <p style="color: var(--primary); font-size: 0.78rem;">Egypt</p>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section>
+                    <div class="section-title">Languages</div>
+                    <div class="lang-item"><span>Arabic</span><span>Native</span></div>
+                    <div class="lang-item"><span>English</span><span>Professional</span></div>
+                </section>
+
+                <!-- Soft Skills -->
+                <section>
+                    <div class="section-title">Soft Skills</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Self-Learning</span>
+                        <span class="skill-tag">Attention to Detail</span>
+                        <span class="skill-tag">Time Management</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
