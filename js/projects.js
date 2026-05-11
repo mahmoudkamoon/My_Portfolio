@@ -89,7 +89,7 @@ const portfolioProjects = [
         fullDescEn: "Get beautiful and accurate weather forecasts. Integrates with OpenWeatherMap API and uses location services.",
         fullDescAr: "احصل على توقعات طقس دقيقة وجميلة. يتصل بـ OpenWeatherMap API ويستخدم خدمات تحديد الموقع.",
         tags: ["Flutter", "Location API", "Dio"],
-        image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?q=80&w=1000&auto=format&fit=crop",
+        image: "assets/images/weather_app.png",
         githubLink: "#",
         playStoreLink: "#"
     },
@@ -102,7 +102,7 @@ const portfolioProjects = [
         fullDescEn: "A beautifully designed application for reading and listening to the Holy Quran, with bookmarking and audio playback features.",
         fullDescAr: "تطبيق بتصميم جميل لقراءة والاستماع إلى القرآن الكريم، مع ميزات الحفظ (العلامات المرجعية) وتشغيل الصوت.",
         tags: ["Flutter", "AudioPlayer", "Local Storage"],
-        image: "https://images.unsplash.com/photo-1609599006353-e629aaab31fc?q=80&w=1000&auto=format&fit=crop",
+        image: "assets/images/qiraa_app.png",
         githubLink: "#",
         playStoreLink: "#"
     },
