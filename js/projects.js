@@ -30,7 +30,7 @@ const portfolioProjects = [
     },
     {
         id: "exam_app",
-        titleEn: " Exam App",
+        titleEn: "Exam App",
         titleAr: "تطبيق اختبارات ",
         shortDescEn: "A robust e-learning platform for taking exams.",
         shortDescAr: "منصة تعليمية قوية لإجراء الاختبارات.",
