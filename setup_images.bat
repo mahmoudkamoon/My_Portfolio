@@ -14,6 +14,8 @@ copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c9
 copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c97b2\chato_app_real_mockup_1778525378192.png" "assets\images\chato_app.png"
 copy "C:\Users\Sshss\.gemini\antigravity\brain\15834071-7f28-4879-b72b-5b77b16c97b2\dawenit_app_real_mockup_1778525841616.png" "assets\images\dawenit_app.png"
 
+copy "C:\Users\Sshss\.gemini\antigravity\brain\cc54028f-639f-4754-b5ee-f6dea0cc5121\media__1778832849151.jpg" "assets\images\profile.jpg"
+
 echo === Done! Images copied successfully ===
 echo.
 echo Now you can deploy your portfolio!

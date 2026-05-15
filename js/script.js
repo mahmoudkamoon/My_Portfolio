@@ -152,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         modal.classList.add('show');
-        document.documentElement.classList.add('no-scroll');
         document.body.classList.add('no-scroll');
     };
 
@@ -171,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeModal() {
         modal.classList.remove('show');
-        document.documentElement.classList.remove('no-scroll');
         document.body.classList.remove('no-scroll');
     }
 
