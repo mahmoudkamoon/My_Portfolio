@@ -1026,6 +1026,11 @@ html, body {
     width: 100%;
 }
 
+.no-scroll {
+    overflow: hidden !important;
+    height: 100%;
+}
+
 /* Ensure images are always contained properly */
 img {
     max-width: 100%;
