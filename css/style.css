@@ -456,6 +456,8 @@ body[lang="ar"] .icon-dart {
 
 .about-image {
     position: relative;
+    max-width: 320px; /* Further reduced for a compact look */
+    margin: 0 auto;
 }
 
 .image-card {
