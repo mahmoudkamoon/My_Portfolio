@@ -144,6 +144,19 @@ const portfolioProjects = [
         image: "assets/images/karam_app.png",
         githubLink: "#",
         playStoreLink: "#"
+    },
+    {
+        id: "power_fitness_app",
+        titleEn: "Power Fitness",
+        titleAr: "تطبيق باور فتنس الرياضي",
+        shortDescEn: "A comprehensive fitness and workout tracking application.",
+        shortDescAr: "تطبيق شامل للياقة البدنية وتتبع التمارين.",
+        fullDescEn: "A complete fitness application featuring personalized workout plans, diet tracking, detailed exercise guides with 3D avatars, and a community chat. Designed with a sleek dark theme and vibrant orange accents for an energetic user experience.",
+        fullDescAr: "تطبيق رياضي متكامل يوفر خطط تمارين مخصصة، تتبع الأنظمة الغذائية، أدلة تمارين مفصلة مع شخصيات ثلاثية الأبعاد، ومحادثة تفاعلية. مصمم بواجهة داكنة أنيقة مع لمسات برتقالية تمنح تجربة مستخدم مليئة بالطاقة.",
+        tags: ["Flutter", "Clean Architecture", "UI/UX", "Firebase"],
+        image: "assets/images/power_fitness_app.png",
+        githubLink: "#",
+        playStoreLink: "#"
     }
 ];
 
