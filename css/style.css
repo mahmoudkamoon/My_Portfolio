@@ -1141,6 +1141,8 @@ html, body {
 
 .no-scroll {
     overflow: hidden !important;
+    height: 100vh !important;
+    touch-action: none;
 }
 
 /* Ensure images are always contained properly */

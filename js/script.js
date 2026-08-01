@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.classList.add('show');
         document.body.classList.add('no-scroll');
+        document.documentElement.classList.add('no-scroll');
     };
 
     closeModalBtn.addEventListener('click', closeModal);
@@ -171,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeModal() {
         modal.classList.remove('show');
         document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
     }
 
     // 7. Scroll Animations (Intersection Observer)
